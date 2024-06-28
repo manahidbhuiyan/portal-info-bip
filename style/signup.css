@@ -64,8 +64,19 @@ a {
 .list-item {
     display: flex;
     padding-bottom: 20px;
+    justify-content: center;
 }
 
+.left-content-icon {
+    width: 10% !important;
+    min-width: 10% !important;
+}
+.list-item>.list-item-text {
+    min-width: 90%;
+}
+.left-content-icon>img {
+    margin: 0px;
+}
 .list-item>.list-item-text>h5 {
     margin: 0px;
     font-size: 16px;
@@ -73,15 +84,6 @@ a {
     color: #1b1b1a;
     line-height: 24px;
 }
-
-.left-content-icon {
-    width: 55px;
-}
-
-.left-content-icon>img {
-    margin: 0px;
-}
-
 .list-item>.list-item-text>p {
     padding: 10px 0 0px 0;
     margin: 0px;
@@ -457,7 +459,6 @@ a {
         margin: 0;
         padding: 0 80px 30px;
     }
-
     .right-title {
         top: 20px;
     }
