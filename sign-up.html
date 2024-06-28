@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>signup</title>
+  <!-- css links -->
+  <link rel="stylesheet" href="style/signup.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header" id="scroll-container">
+    <img src="./image/logo.svg" alt="Logo" class="logo">
+  </header>
+  <!-- main content -->
+  <main class="main-content-area">
+      <div class="left-content">
+        <h3>Your clients, your communication, our platform.<br>
+          Join Infobip today.</h3>
+        <div class="list-item-area">
+          <div class="list-item">
+            <div class="left-content-icon">
+              <img src="image/orange-tik.svg" alt="">
+            </div>
+            <div class="list-item-text">
+              <h5>Activate free messages on SMS, Email, WhatsApp, Viber, and Voice.</h5>
+              <p>Connect with your customers through the channels they love in just a few clicks.</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="left-content-icon">
+              <img src="image/orange-tik.svg" alt="">
+            </div>
+            <div class="list-item-text">
+              <h5>Enjoy a free trial of Infobip's products.</h5>
+              <p>Boost customer engagement, optimize call centers, and create chatbots at your own pace.</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="left-content-icon">
+              <img src="image/orange-tik.svg" alt="">
+            </div>
+            <div class="list-item-text">
+              <h5>Explore Infobip APIs or use a user-friendly no-code interface.</h5>
+              <p>Seamlessly integrate and manage communication channels your way.</p>
+            </div>
+          </div>
+        </div>
+        <p class="company-text">You are in good company</p>
+        <!-- partner area -->
+        <section class="partner-logos">
+          <div class="first-row">
+            <div class="parter-name">
+              <img class="logos-img" src="image/strave.svg" alt="">
+            </div>
+            <div class="parter-name">
+              <img class="logos-img" src="image/r-bank.svg" alt="">
+            </div>
+            <div class="parter-name">
+              <img class="logos-img" src="image/lg.svg" alt="">
+            </div>
+          </div>
+          <div class="second-row">
+            <div class="parter-name">
+              <img class="logos-img" src="image/meta.svg" alt="">
+            </div>
+            <div class="parter-name">
+              <img class="logos-img" src="image/unicef.svg" alt="">
+            </div>
+            <div class="parter-name">
+              <img class="logos-img" src="image/uber.svg" alt="">
+            </div>
+          </div>
+        </section>
+
+      </div>
+    <div class="right-content">
+      <div class="container">
+        <h3 class="right-title">Sign up For free</h3>
+        <h3 class="right-sub-title">Your clients, your communication, our platform.
+          Join Infobip today.</h3>
+        <p class="right-small-title">Already have an account? <a href="http://"> Log in</a></p> <br>
+
+        <form>
+          <div class="form-group">
+            <label for="username">Company email</label>
+            <input type="email" id="email" name="email" required placeholder="Company email">
+            <div class="required-message"><img src="./image/error.svg" alt="Icon" class="icon">
+              <p>This field is required.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label for="email">First name</label>
+                <input type="text" id="username" name="username" required placeholder="First name">
+                <div class="required-message"><img src="./image/error.svg" alt="Icon" class="icon">
+                  <p>This field is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label for="email">Last name</label>
+                <input type="text" id="username" name="username" required placeholder="Last name">
+                <div class="required-message"><img src="./image/error.svg" alt="Icon" class="icon">
+                  <p>This field is required.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label for="email">Country</label>
+                <!-- country selector -->
+                <div class="country-selector">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle custom-dropdown-toggle" type="button" id="countryDropdown"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Select Country <img src="./image/svg-image-18.svg" alt="">
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="countryDropdown" id="countryDropdownMenu">
+                      <!-- Options will be populated by JavaScript -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="country-display" id="countryDisplay" style="display: none;">
+                  <img src="" alt="Country Flag" class="country-flag" id="countryFlag">
+                  <span id="countryName"></span>
+                  <img src="./image/svg-image-18.svg" alt="">
+                </div>
+  
+                <small style="color: #72716F;">Don't see your country?
+                  <a href="#">Contact us</a></small>
+              </div>
+            </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <label for="email">Company website (optional)</label>
+              <input type="text" id="username" name="username" required placeholder="Website">
+              <div class="required-message"><img src="./image/error.svg" alt="Icon" class="icon">
+                <p>This field is required.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      </form>
+      <div class="accept-box">
+        <input type="checkbox" id="acceptNews" name="acceptNews">
+        <label for="acceptNews">I want to receive Infobip news, trends, offers, or blogs by email.</label>
+      </div>
+      <div class="notice-text">
+        <p>By signing up, you confirm that you’ve read and accepted our
+          <a href="#">Terms and Conditions</a>
+          and our
+          <a href="#">Privacy Notice</a>.
+        </p>
+      </div>
+      <button class="btn free-trial-btn">START FREE TRIAL</button>
+      <div class="after-button-text">
+        <p>No credit card required</p>
+      </div>
+      <div class="line-container">
+        <div class="line"></div>
+        <div class="line-text">OR CONTINUE WITH</div>
+        <div class="line"></div>
+      </div>
+      <div class="login-button">
+        <a class="google-login" href="#">
+          <img src="./image/google-icon.svg" alt=""> GOOGLE
+        </a>
+        <a class="google-login" href="#">
+          <img src="./image/github-icon.svg" alt=""> GITHUB
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="content-bottom">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./image/earth.svg" alt="">
+          <span>English</span>
+          <img src="./image/svg-image-18.svg" alt="Dropdown Icon" class="dropdown-image" id="dropdownIcon"> </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">English</a></li>
+          <li><a class="dropdown-item" href="#">Bangla</a></li>
+          <li><a class="dropdown-item" href="#">Arabic</a></li>
+          <li><a class="dropdown-item" href="#">Espanol</a></li>
+          <li><a class="dropdown-item" href="#">Francais</a></li>
+          <li><a class="dropdown-item" href="#">English</a></li>
+          <li><a class="dropdown-item" href="#">Bangla</a></li>
+          <li><a class="dropdown-item" href="#">Arabic</a></li>
+          <li><a class="dropdown-item" href="#">Espanol</a></li>
+          <li><a class="dropdown-item" href="#">Francais</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+  <script>
+    const countries = [
+      { code: 'BD', name: 'Bangladesh', flag: 'https://flagcdn.com/bd.svg' },
+      { code: 'US', name: 'United States', flag: 'https://flagcdn.com/us.svg' },
+      { code: 'CA', name: 'Canada', flag: 'https://flagcdn.com/ca.svg' },
+      { code: 'GB', name: 'United Kingdom', flag: 'https://flagcdn.com/gb.svg' },
+      { code: 'AU', name: 'Australia', flag: 'https://flagcdn.com/au.svg' },
+      // Add more countries as needed
+    ];
+
+    const countryDropdownMenu = document.getElementById('countryDropdownMenu');
+    const displayElement = document.getElementById('countryDisplay');
+    const flagElement = document.getElementById('countryFlag');
+    const nameElement = document.getElementById('countryName');
+    const dropdownButton = document.getElementById('countryDropdown');
+
+    // Function to initialize with Bangladesh as default
+    function initializeDefault() {
+      const defaultCountry = countries.find(country => country.code === 'BD');
+      if (defaultCountry) {
+        flagElement.src = defaultCountry.flag;
+        nameElement.textContent = defaultCountry.name;
+        displayElement.style.display = 'flex';
+        dropdownButton.innerHTML = `<img src="${defaultCountry.flag}" alt="${defaultCountry.name} Flag" class="country-flag">${defaultCountry.name}`;
+      }
+    }
+
+    // Populate dropdown menu
+    countries.forEach(country => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a class="dropdown-item" href="#" data-flag="${country.flag}" data-name="${country.name}">
+                            <img src="${country.flag}" alt="${country.name} Flag">${country.name}
+                        </a>`;
+      countryDropdownMenu.appendChild(li);
+    });
+
+    // Event listener for dropdown item click
+    countryDropdownMenu.addEventListener('click', function (event) {
+      if (event.target && event.target.matches("a.dropdown-item")) {
+        event.preventDefault();
+        const selectedFlag = event.target.getAttribute('data-flag');
+        const selectedName = event.target.getAttribute('data-name');
+
+        flagElement.src = selectedFlag;
+        nameElement.textContent = selectedName;
+        displayElement.style.display = 'flex';
+
+        dropdownButton.innerHTML = `<img src="${selectedFlag}" alt="${selectedName} Flag" class="country-flag">${selectedName}`;
+      }
+    });
+
+    // Initialize with default country
+    initializeDefault();
+  </script>
+  <script>
+    const dropdownToggle = document.getElementById('dropdownToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownToggle.addEventListener('click', function () {
+      toggleDropdown();
+    });
+
+    function toggleDropdown() {
+      dropdownMenu.classList.toggle('show');
+      dropdownToggle.classList.toggle('rotate-icon');
+    }
+  </script>
+</body>
+
+</html>
