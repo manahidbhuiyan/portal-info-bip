@@ -1,84 +1,142 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>create</title>
-    <!-- css links -->
-    <link rel="stylesheet" href="style/create.css">
-    <!-- bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- font awesome  -->
-    <script
-      src="https://kit.fontawesome.com/722bf37857.js"
-      crossorigin="anonymous"
-    ></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>create</title>
+  <!-- css links -->
+  <link rel="stylesheet" href="style/create.css">
+  <!-- bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- font awesome  -->
+  <script src="https://kit.fontawesome.com/722bf37857.js" crossorigin="anonymous"></script>
+  <!-- date picker cdn -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    rel="stylesheet">
 </head>
 
-  <body>
-    <!-- header -->
-    <header class="header">
-      
-    </header>
-    <!-- main content -->
-     <main class="main-area">
-        <div class="container">
-            <div class="main-content-dropdown">
-                <img src="./image/svg-image-17.svg" alt="Profile" class="sms-image">
-                <div class="text">SMS</div>
-                <img src="./image/svg-image-18.svg" alt="dropdown-icon" class="dropdown-image">
-            </div>
-            <div class="main-area-box">
-                <div class="main-box-title">
-                    <h4>Recipients and message</h4>
-                </div>
-                <div class="main-box-content">
-                  <!-- multiple select area -->
-                  <div class="recept">
-                    <h6 class="accordion-title">Recipients</h6>
-                  </div>
-                  <div class="recept">
-                    <h6 class="accordion-title">Sender</h6>
-                  </div>
-                  <div class="msg-area">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-10">
-                        <div class="msg-title">
-                          <h6 class="accordion-title">Message</h6>
-                          <h6 class="msg-count">1 Message / 160 characters left</h6>
-                        </div>
-                        <div class="textarea-container">
-                          <textarea class="form-control textarea" rows="6" placeholder="Enter your message"></textarea>
-                          <img src="./image/svg-image-24.svg" alt="Icon" class="textarea-image">
-                      </div>
-                      </div>
-                      <div class="col-sm-12 col-md-2">
-                        <h6 class="accordion-title">Character set <img src="./image/svg-image-25.svg" alt=""></h6>
-                        <div class="custom-dropdown-container">
-                          <div class="custom-dropdown">
-                              <input type="text" id="dropdownInput" readonly placeholder="Unicode">
-                              <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon">
-                          </div>
-                          <div class="dropdown-list" id="dropdownList">
-                              <div class="dropdown-list-item" data-value="1">Unicode</div>
-                              <div class="dropdown-list-item" data-value="2">Default</div>
-                              <div class="dropdown-list-item" data-value="3">Greek</div>
-                              <div class="dropdown-list-item" data-value="3">Turkish</div>
-                              <div class="dropdown-list-item" data-value="3">Bangla</div>
-                          </div>
-                      </div>
-                      </div>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Flash SMS <img src="./image/svg-image-25.svg" style="cursor: pointer;" alt="">
-                      </label>
-                    </div>
-                  </div>
-                 
+<body>
+  <!-- header -->
+  <header class="header">
 
-                    <!-- <div class="accordion" id="accordionExample">
+  </header>
+  <!-- main content -->
+  <main class="main-area">
+    <div class="container">
+      <div class="main-content-dropdown">
+        <img src="./image/svg-image-17.svg" alt="Profile" class="sms-image">
+        <div class="text">SMS</div>
+        <img src="./image/svg-image-18.svg" alt="dropdown-icon" class="dropdown-image">
+      </div>
+      <div class="main-area-box">
+        <div class="main-box-title">
+          <h4>Recipients and message</h4>
+          </div>
+        <div class="main-box-content">
+          <!-- multiple select area -->
+          <div class="recept">
+            <h6 class="accordion-title">Recipients</h6>
+            <div class="first-area-dropdown">
+              <div class="dropdown-container">
+                <input type="text" class="dropdown-input" id="dropdownInput-recipient"
+                  placeholder="Type or select recipients name">
+                <img src="./image/svg-image-18.svg" alt="Dropdown Icon" class="dropdown-icon"
+                  id="dropdownIcon-recipient">
+                <div class="dropdown-list" id="dropdownList-recipient">
+                  <div class="dropdown-section">
+                    <div class="ab-top">
+                      <p>People</p>
+                      <a href="#">View All People</a>
+                  </div>
+                    <div class="dropdown-list-item ab-mid">
+                      <span class="name-icon">BC</span>
+                      <span class="name">bkash chandra</span>
+                    </div>
+                  </div>
+                  <div class="dropdown-section">
+                    <div class="ab-top mt-1">
+                      <p>Option</p>
+                      <a href="#">View More</a>
+                  </div>
+                    <div class="dropdown-list-item">
+                      <p>01834960111</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recept">
+            <h6 class="accordion-title">Sender</h6>
+            <div class="first-area-dropdown">
+              <div class="dropdown-container">
+                <input type="text" class="dropdown-input" id="dropdownInput-sender"
+                  placeholder="Type or select sender name">
+                <img src="./image/svg-image-18.svg" alt="Dropdown Icon" class="dropdown-icon"
+                  id="dropdownIcon-sender">
+                <div class="dropdown-list sender-dropdown-list" id="dropdownList-sender">
+                  <div class="dropdown-section sender">
+                    <div class="dropdown-section-title">SHARED</div>
+                    <div class="dropdown-list-item">
+                      <P>447491163443</P>
+                    </div>
+                  </div>
+                  <hr class="hr-1">
+                  <div class="dropdown-section sender">
+                    <div class="dropdown-section-title">DEDICATED</div>
+                    <div class="dropdown-list-item">
+                      <p>ServiceSMS</p>
+                    </div>
+                  </div>
+                  <div class="dropdown-section">
+                  <hr class="hr-2">
+                    <a class="dropdown-list-item-button" href="#">BUY NUMBER</a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="msg-area">
+            <div class="row">
+              <div class="col-sm-12 col-lg-9 col-xl-10">
+                <div class="msg-title">
+                  <h6 class="accordion-title">Message</h6>
+                  <h6 class="msg-count">1 Message / 160 characters left</h6>
+                </div>
+                <div class="textarea-container">
+                  <textarea class="form-control textarea" rows="6" placeholder="Enter your message"></textarea>
+                  <img src="./image/svg-image-24.svg" alt="Icon" class="textarea-image">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-3 col-xl-2">
+                <h6 class="accordion-title">Character set <img src="./image/svg-image-25.svg" alt=""></h6>
+                <div class="custom-dropdown-container">
+                  <div class="custom-dropdown" id="custom-dropdown1">
+                    <input type="text" id="dropdownInput dropdownInput1" readonly placeholder="Unicode">
+                    <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon1">
+                  </div>
+                  <div class="dropdown-list" id="dropdownList1">
+                    <div class="dropdown-list-item dls-1" data-value="1">Unicode</div>
+                    <div class="dropdown-list-item dls-1" data-value="2">Default</div>
+                    <div class="dropdown-list-item dls-1" data-value="3">Greek</div>
+                    <div class="dropdown-list-item dls-1" data-value="3">Turkish</div>
+                    <div class="dropdown-list-item dls-1" data-value="3">Bangla</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Flash SMS <img src="./image/svg-image-25.svg" style="cursor: pointer;" alt="">
+              </label>
+            </div>
+          </div>
+
+
+          <!-- <div class="accordion" id="accordionExample">
                         <h6 class="accordion-title">Recipients</h6>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -143,14 +201,617 @@
                             </div>
                           </div>
                     </div> -->
-                </div>
-            </div>
         </div>
-     </main>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <!-- custom js -->
-      <script src="./js/create.js"></script>
+      </div>
+
+      <!-- accordion area -->
+
+      <div class="accordion" id="accordionExample">
+        <!-- 1st accordion -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <div class="accordion-head-image">
+                <img src="./image/svg-image-27.svg" alt="">
+              </div>
+              <div class="accordion-head-text">
+                <h5>Message scheduling</h5>
+                <p>Schedule your campaign for a specific date and time.</p>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="com-start">
+                <h6 class="accordion-title">Communication start</h6>
+                <div class="grid-container">
+                  <div class="grid-item">
+                    <p class="com-title">Start date</p>
+                    <div class="input-group">
+                      <input type="text" class="form-control date-input" id="datepicker" placeholder="Select Date">
+                      <span class="input-group-img"><img src="./image/svg-image-28.svg" alt="" /></span>
+                    </div>
+                  </div>
+                  <div class="grid-item">
+                    <p class="com-title">Start time</p>
+                    <div class="time-picker-container">
+                      <input type="text" class="form-control time-picker-input" placeholder="Select Time"
+                        id="timePickerInput1">
+                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon1" alt="Dropdown Icon">
+                      <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown1">
+                        <li class="dropdown-item">00:00</li>
+                        <li class="dropdown-item">00:15</li>
+                        <li class="dropdown-item">00:30</li>
+                        <li class="dropdown-item">00:45</li>
+                        <li class="dropdown-item">01:00</li>
+                        <li class="dropdown-item">01:15</li>
+                        <li class="dropdown-item">01:30</li>
+                        <li class="dropdown-item">01:45</li>
+                        <li class="dropdown-item">02:00</li>
+                        <li class="dropdown-item">02:15</li>
+                        <li class="dropdown-item">02:30</li>
+                        <li class="dropdown-item">02:45</li>
+                        <li class="dropdown-item">03:00</li>
+                        <li class="dropdown-item">03:15</li>
+                        <li class="dropdown-item">03:30</li>
+                        <li class="dropdown-item">03:45</li>
+                        <li class="dropdown-item">04:00</li>
+                        <li class="dropdown-item">04:15</li>
+                        <li class="dropdown-item">04:30</li>
+                        <li class="dropdown-item">04:45</li>
+                        <li class="dropdown-item">05:00</li>
+                        <li class="dropdown-item">05:15</li>
+                        <li class="dropdown-item">05:30</li>
+                        <li class="dropdown-item">05:45</li>
+                        <li class="dropdown-item">06:00</li>
+                        <li class="dropdown-item">06:15</li>
+                        <li class="dropdown-item">06:30</li>
+                        <li class="dropdown-item">06:45</li>
+                        <li class="dropdown-item">07:00</li>
+                        <li class="dropdown-item">07:15</li>
+                        <li class="dropdown-item">07:30</li>
+                        <li class="dropdown-item">07:45</li>
+                        <li class="dropdown-item">08:00</li>
+                        <li class="dropdown-item">08:15</li>
+                        <li class="dropdown-item">08:30</li>
+                        <li class="dropdown-item">08:45</li>
+                        <li class="dropdown-item">09:00</li>
+                        <li class="dropdown-item">09:15</li>
+                        <li class="dropdown-item">09:30</li>
+                        <li class="dropdown-item">09:45</li>
+                        <li class="dropdown-item">10:00</li>
+                        <li class="dropdown-item">10:15</li>
+                        <li class="dropdown-item">10:30</li>
+                        <li class="dropdown-item">10:45</li>
+                        <li class="dropdown-item">11:00</li>
+                        <li class="dropdown-item">11:15</li>
+                        <li class="dropdown-item">11:30</li>
+                        <li class="dropdown-item">11:45</li>
+                        <li class="dropdown-item">12:00</li>
+                        <li class="dropdown-item">12:15</li>
+                        <li class="dropdown-item">12:30</li>
+                        <li class="dropdown-item">12:45</li>
+                        <li class="dropdown-item">13:00</li>
+                        <li class="dropdown-item">13:15</li>
+                        <li class="dropdown-item">13:30</li>
+                        <li class="dropdown-item">13:45</li>
+                        <li class="dropdown-item">14:00</li>
+                        <li class="dropdown-item">14:15</li>
+                        <li class="dropdown-item">14:30</li>
+                        <li class="dropdown-item">14:45</li>
+                        <li class="dropdown-item">15:00</li>
+                        <li class="dropdown-item">15:15</li>
+                        <li class="dropdown-item">15:30</li>
+                        <li class="dropdown-item">15:45</li>
+                        <li class="dropdown-item">16:00</li>
+                        <li class="dropdown-item">16:15</li>
+                        <li class="dropdown-item">16:30</li>
+                        <li class="dropdown-item">16:45</li>
+                        <li class="dropdown-item">17:00</li>
+                        <li class="dropdown-item">17:15</li>
+                        <li class="dropdown-item">17:30</li>
+                        <li class="dropdown-item">17:45</li>
+                        <li class="dropdown-item">18:00</li>
+                        <li class="dropdown-item">18:15</li>
+                        <li class="dropdown-item">18:30</li>
+                        <li class="dropdown-item">18:45</li>
+                        <li class="dropdown-item">19:00</li>
+                        <li class="dropdown-item">19:15</li>
+                        <li class="dropdown-item">19:30</li>
+                        <li class="dropdown-item">19:45</li>
+                        <li class="dropdown-item">20:00</li>
+                        <li class="dropdown-item">20:15</li>
+                        <li class="dropdown-item">20:30</li>
+                        <li class="dropdown-item">20:45</li>
+                        <li class="dropdown-item">21:00</li>
+                        <li class="dropdown-item">21:15</li>
+                        <li class="dropdown-item">21:30</li>
+                        <li class="dropdown-item">21:45</li>
+                        <li class="dropdown-item">22:00</li>
+                        <li class="dropdown-item">22:15</li>
+                        <li class="dropdown-item">22:30</li>
+                        <li class="dropdown-item">22:45</li>
+                        <li class="dropdown-item">23:00</li>
+                        <li class="dropdown-item">23:15</li>
+                        <li class="dropdown-item">23:30</li>
+                        <li class="dropdown-item">23:45</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="grid-item full-width">
+                    <p class="com-title">Time zone</p>
+                    <div class="custom-dropdown-container">
+                      <div class="custom-dropdown" id="custom-dropdown-time">
+                        <input type="text" id="dropdownInput dropdownInput-time" readonly
+                          placeholder="United Arab Emirates / Abu Dhabi (GST)">
+                        <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-time">
+                      </div>
+                      <div class="dropdown-list" id="dropdownList-time">
+                        <div class="dropdown-list-item dls-l" data-value="1">United Arab Emirates / Abu Dhabi (GST)
+                        </div>
+                        <div class="dropdown-list-item dls-l" data-value="2">Ghana / Accra (GMT)</div>
+                        <div class="dropdown-list-item dls-l" data-value="3">Australia / Adelaide (ACST/ACDT)</div>
+                        <div class="dropdown-list-item dls-l" data-value="3">Ethiopia / Addis Ababa (EAT)</div>
+                        <div class="dropdown-list-item dls-l" data-value="3">Qatar / Doha (AST)</div>
+                        <div class="dropdown-list-item dls-l" data-value="3">Jordan / Amman (EET/EEST)</div>
+                        <div class="dropdown-list-item dls-l" data-value="3">United States / Adak (HST/HDT)</div>
+                        <div class="dropdown-list-item dls-l" data-value="3">Bangladesh / Dhaka (BST)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <h6 class="accordion-title">Communication start</h6>
+                <div class="grid-container">
+                  <div class="grid-item">
+                    <p class="com-title">Start time</p>
+                    <div class="time-picker-container">
+                      <input type="text" class="form-control time-picker-input" placeholder="Select Time"
+                        id="timePickerInput2">
+                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon2" alt="Dropdown Icon">
+                      <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown2">
+                        <li class="dropdown-item">00:00</li>
+                        <li class="dropdown-item">00:15</li>
+                        <li class="dropdown-item">00:30</li>
+                        <li class="dropdown-item">00:45</li>
+                        <li class="dropdown-item">01:00</li>
+                        <li class="dropdown-item">01:15</li>
+                        <li class="dropdown-item">01:30</li>
+                        <li class="dropdown-item">01:45</li>
+                        <li class="dropdown-item">02:00</li>
+                        <li class="dropdown-item">02:15</li>
+                        <li class="dropdown-item">02:30</li>
+                        <li class="dropdown-item">02:45</li>
+                        <li class="dropdown-item">03:00</li>
+                        <li class="dropdown-item">03:15</li>
+                        <li class="dropdown-item">03:30</li>
+                        <li class="dropdown-item">03:45</li>
+                        <li class="dropdown-item">04:00</li>
+                        <li class="dropdown-item">04:15</li>
+                        <li class="dropdown-item">04:30</li>
+                        <li class="dropdown-item">04:45</li>
+                        <li class="dropdown-item">05:00</li>
+                        <li class="dropdown-item">05:15</li>
+                        <li class="dropdown-item">05:30</li>
+                        <li class="dropdown-item">05:45</li>
+                        <li class="dropdown-item">06:00</li>
+                        <li class="dropdown-item">06:15</li>
+                        <li class="dropdown-item">06:30</li>
+                        <li class="dropdown-item">06:45</li>
+                        <li class="dropdown-item">07:00</li>
+                        <li class="dropdown-item">07:15</li>
+                        <li class="dropdown-item">07:30</li>
+                        <li class="dropdown-item">07:45</li>
+                        <li class="dropdown-item">08:00</li>
+                        <li class="dropdown-item">08:15</li>
+                        <li class="dropdown-item">08:30</li>
+                        <li class="dropdown-item">08:45</li>
+                        <li class="dropdown-item">09:00</li>
+                        <li class="dropdown-item">09:15</li>
+                        <li class="dropdown-item">09:30</li>
+                        <li class="dropdown-item">09:45</li>
+                        <li class="dropdown-item">10:00</li>
+                        <li class="dropdown-item">10:15</li>
+                        <li class="dropdown-item">10:30</li>
+                        <li class="dropdown-item">10:45</li>
+                        <li class="dropdown-item">11:00</li>
+                        <li class="dropdown-item">11:15</li>
+                        <li class="dropdown-item">11:30</li>
+                        <li class="dropdown-item">11:45</li>
+                        <li class="dropdown-item">12:00</li>
+                        <li class="dropdown-item">12:15</li>
+                        <li class="dropdown-item">12:30</li>
+                        <li class="dropdown-item">12:45</li>
+                        <li class="dropdown-item">13:00</li>
+                        <li class="dropdown-item">13:15</li>
+                        <li class="dropdown-item">13:30</li>
+                        <li class="dropdown-item">13:45</li>
+                        <li class="dropdown-item">14:00</li>
+                        <li class="dropdown-item">14:15</li>
+                        <li class="dropdown-item">14:30</li>
+                        <li class="dropdown-item">14:45</li>
+                        <li class="dropdown-item">15:00</li>
+                        <li class="dropdown-item">15:15</li>
+                        <li class="dropdown-item">15:30</li>
+                        <li class="dropdown-item">15:45</li>
+                        <li class="dropdown-item">16:00</li>
+                        <li class="dropdown-item">16:15</li>
+                        <li class="dropdown-item">16:30</li>
+                        <li class="dropdown-item">16:45</li>
+                        <li class="dropdown-item">17:00</li>
+                        <li class="dropdown-item">17:15</li>
+                        <li class="dropdown-item">17:30</li>
+                        <li class="dropdown-item">17:45</li>
+                        <li class="dropdown-item">18:00</li>
+                        <li class="dropdown-item">18:15</li>
+                        <li class="dropdown-item">18:30</li>
+                        <li class="dropdown-item">18:45</li>
+                        <li class="dropdown-item">19:00</li>
+                        <li class="dropdown-item">19:15</li>
+                        <li class="dropdown-item">19:30</li>
+                        <li class="dropdown-item">19:45</li>
+                        <li class="dropdown-item">20:00</li>
+                        <li class="dropdown-item">20:15</li>
+                        <li class="dropdown-item">20:30</li>
+                        <li class="dropdown-item">20:45</li>
+                        <li class="dropdown-item">21:00</li>
+                        <li class="dropdown-item">21:15</li>
+                        <li class="dropdown-item">21:30</li>
+                        <li class="dropdown-item">21:45</li>
+                        <li class="dropdown-item">22:00</li>
+                        <li class="dropdown-item">22:15</li>
+                        <li class="dropdown-item">22:30</li>
+                        <li class="dropdown-item">22:45</li>
+                        <li class="dropdown-item">23:00</li>
+                        <li class="dropdown-item">23:15</li>
+                        <li class="dropdown-item">23:30</li>
+                        <li class="dropdown-item">23:45</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="grid-item">
+                    <p class="com-title">End time</p>
+                    <div class="time-picker-container">
+                      <input type="text" class="form-control time-picker-input" placeholder="Select Time"
+                        id="timePickerInput3">
+                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon3" alt="Dropdown Icon">
+                      <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown3">
+                        <li class="dropdown-item">00:00</li>
+                        <li class="dropdown-item">00:15</li>
+                        <li class="dropdown-item">00:30</li>
+                        <li class="dropdown-item">00:45</li>
+                        <li class="dropdown-item">01:00</li>
+                        <li class="dropdown-item">01:15</li>
+                        <li class="dropdown-item">01:30</li>
+                        <li class="dropdown-item">01:45</li>
+                        <li class="dropdown-item">02:00</li>
+                        <li class="dropdown-item">02:15</li>
+                        <li class="dropdown-item">02:30</li>
+                        <li class="dropdown-item">02:45</li>
+                        <li class="dropdown-item">03:00</li>
+                        <li class="dropdown-item">03:15</li>
+                        <li class="dropdown-item">03:30</li>
+                        <li class="dropdown-item">03:45</li>
+                        <li class="dropdown-item">04:00</li>
+                        <li class="dropdown-item">04:15</li>
+                        <li class="dropdown-item">04:30</li>
+                        <li class="dropdown-item">04:45</li>
+                        <li class="dropdown-item">05:00</li>
+                        <li class="dropdown-item">05:15</li>
+                        <li class="dropdown-item">05:30</li>
+                        <li class="dropdown-item">05:45</li>
+                        <li class="dropdown-item">06:00</li>
+                        <li class="dropdown-item">06:15</li>
+                        <li class="dropdown-item">06:30</li>
+                        <li class="dropdown-item">06:45</li>
+                        <li class="dropdown-item">07:00</li>
+                        <li class="dropdown-item">07:15</li>
+                        <li class="dropdown-item">07:30</li>
+                        <li class="dropdown-item">07:45</li>
+                        <li class="dropdown-item">08:00</li>
+                        <li class="dropdown-item">08:15</li>
+                        <li class="dropdown-item">08:30</li>
+                        <li class="dropdown-item">08:45</li>
+                        <li class="dropdown-item">09:00</li>
+                        <li class="dropdown-item">09:15</li>
+                        <li class="dropdown-item">09:30</li>
+                        <li class="dropdown-item">09:45</li>
+                        <li class="dropdown-item">10:00</li>
+                        <li class="dropdown-item">10:15</li>
+                        <li class="dropdown-item">10:30</li>
+                        <li class="dropdown-item">10:45</li>
+                        <li class="dropdown-item">11:00</li>
+                        <li class="dropdown-item">11:15</li>
+                        <li class="dropdown-item">11:30</li>
+                        <li class="dropdown-item">11:45</li>
+                        <li class="dropdown-item">12:00</li>
+                        <li class="dropdown-item">12:15</li>
+                        <li class="dropdown-item">12:30</li>
+                        <li class="dropdown-item">12:45</li>
+                        <li class="dropdown-item">13:00</li>
+                        <li class="dropdown-item">13:15</li>
+                        <li class="dropdown-item">13:30</li>
+                        <li class="dropdown-item">13:45</li>
+                        <li class="dropdown-item">14:00</li>
+                        <li class="dropdown-item">14:15</li>
+                        <li class="dropdown-item">14:30</li>
+                        <li class="dropdown-item">14:45</li>
+                        <li class="dropdown-item">15:00</li>
+                        <li class="dropdown-item">15:15</li>
+                        <li class="dropdown-item">15:30</li>
+                        <li class="dropdown-item">15:45</li>
+                        <li class="dropdown-item">16:00</li>
+                        <li class="dropdown-item">16:15</li>
+                        <li class="dropdown-item">16:30</li>
+                        <li class="dropdown-item">16:45</li>
+                        <li class="dropdown-item">17:00</li>
+                        <li class="dropdown-item">17:15</li>
+                        <li class="dropdown-item">17:30</li>
+                        <li class="dropdown-item">17:45</li>
+                        <li class="dropdown-item">18:00</li>
+                        <li class="dropdown-item">18:15</li>
+                        <li class="dropdown-item">18:30</li>
+                        <li class="dropdown-item">18:45</li>
+                        <li class="dropdown-item">19:00</li>
+                        <li class="dropdown-item">19:15</li>
+                        <li class="dropdown-item">19:30</li>
+                        <li class="dropdown-item">19:45</li>
+                        <li class="dropdown-item">20:00</li>
+                        <li class="dropdown-item">20:15</li>
+                        <li class="dropdown-item">20:30</li>
+                        <li class="dropdown-item">20:45</li>
+                        <li class="dropdown-item">21:00</li>
+                        <li class="dropdown-item">21:15</li>
+                        <li class="dropdown-item">21:30</li>
+                        <li class="dropdown-item">21:45</li>
+                        <li class="dropdown-item">22:00</li>
+                        <li class="dropdown-item">22:15</li>
+                        <li class="dropdown-item">22:30</li>
+                        <li class="dropdown-item">22:45</li>
+                        <li class="dropdown-item">23:00</li>
+                        <li class="dropdown-item">23:15</li>
+                        <li class="dropdown-item">23:30</li>
+                        <li class="dropdown-item">23:45</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="grid-item full-width">
+                    <p class="com-title">Days</p>
+                    <div class="custom-dropdown-container">
+                      <div class="custom-dropdown" id="custom-dropdown-day">
+                        <input type="text" id="dropdownInput dropdownInput-day" readonly
+                          placeholder="Saturday">
+                        <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-day">
+                      </div>
+                      <div class="dropdown-list" id="dropdownList-day">
+                        <div class="dropdown-list-item dls-3" data-value="1">Saturday</div>
+                        <div class="dropdown-list-item dls-3" data-value="1">Sunday</div>
+                        <div class="dropdown-list-item dls-3" data-value="1">Monday</div>
+                        <div class="dropdown-list-item dls-3" data-value="1">Tuesday</div>
+                        <div class="dropdown-list-item dls-3" data-value="1">Wednesday</div>
+                        <div class="dropdown-list-item dls-3" data-value="1">Thursday</div>
+                        <div class="dropdown-list-item dls-3" data-value="1">Friday</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2nd accordion -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div class="accordion-head-image">
+                <img src="./image/svg-image-31.svg" alt="">
+              </div>
+              <div class="accordion-head-text">
+                <h5>Tracking and reporting</h5>
+                <p>Track customer actions and generate reports to discover more about your customers.</p>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body middle-accordion-body">
+              <div class="form-checkbox">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+
+                <label class="form-check-label" for="flexCheckDefault">
+                  <span class="check-level-1">Shorten URLs</span> <br>
+                  <span class="check-level-2">Required to track URL clicks. Short URLs expire 100 days after the
+                    launch.</span>
+                </label>
+              </div>
+              <div class="accordion-body-title">
+                Tracking options
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <span class="check-level-1">Track URL clicks</span> <br>
+                  <span class="check-level-2">Discover which campaign links were clicked on, how many times, and by
+                    whom.</span>
+                </label>
+              </div>
+              <div class="accordion-body-title">
+                Reporting options
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <span class="check-level-1">Enable delivery reports over API pull</span> <br>
+                  <span class="check-level-2">Discover how many messages were delivered.</span>
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <span class="check-level-1">Push delivery reports to webhook</span> <br>
+                  <span class="check-level-2">Subscribe to events happening in your account with your integration
+                    installed.</span>
+                </label>
+              </div>
+              <div class="">
+                <h5 class="accordion-body-title">Data Payload</h5>
+                <p class="Select-additiona-text">Select additional data from contacts and add it to the message. This
+                  data will be <br> visible on message
+                  reports.
+                  <a href="#">Learn More</a>
+                </p>
+              </div>
+              <div class="data-pay-dropdown">
+                <div class="dropdown-container">
+                  <input type="text" class="dropdown-input" id="dropdownInput-dataPay" readonly
+                    placeholder="Select options">
+                  <img src="./image/svg-image-18.svg" alt="Dropdown Icon" class="dropdown-icon"
+                    id="dropdownIcon-dataPay">
+                  <div class="dropdown-list" id="dropdownList-dataPay">
+                    <div class="dropdown-section">
+                      <div class="dropdown-section-title">Standard Attributes</div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option1">
+                        <label for="option1">Id</label>
+                      </div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option2">
+                        <label for="option2">firstName</label>
+                      </div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option2">
+                        <label for="option2">lastName</label>
+                      </div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option2">
+                        <label for="option2">type</label>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="dropdown-section">
+                      <div class="dropdown-section-title">Contact Information</div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option3">
+                        <label for="option3">Item 3</label>
+                      </div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option4">
+                        <label for="option4">Item 4</label>
+                      </div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option3">
+                        <label for="option3">Item 3</label>
+                      </div>
+                      <div class="dropdown-list-item">
+                        <input type="checkbox" id="option4">
+                        <label for="option4">Item 4</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- 3rd accordion -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+              <div class="accordion-head-image">
+                <img src="./image/svg-image-34.svg" alt="">
+              </div>
+              <div class="accordion-head-text">
+                <h5>Advanced Settings</h5>
+                <p>Track customer actions and generate reports to discover more about your customers.</p>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="advance-setting-area">
+                <div class="advance-text">
+                  <h3>Message sending speed</h3>
+                  <p>Limit the number of messages sent out over time. Set the speed that your customer support can
+                    handle to prevent crashes.</p>
+                </div>
+                <div class="advance-option">
+                  <div class="custom-dropdown-container time-unit">
+                    <h6 class="accordion-title">Time unit</h6>
+                    <div class="custom-dropdown" id="custom-dropdown11">
+                      <input type="text" id="dropdownInput dropdownInput3" readonly placeholder="Select speed unit">
+                      <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon11">
+                    </div>
+                    <div class="dropdown-list" id="dropdownList3">
+                      <div class="dropdown-list-item dls-2" data-value="1">Select nono</div>
+                      <div class="dropdown-list-item dls-2" data-value="2">per Minute</div>
+                      <div class="dropdown-list-item dls-2" data-value="3">per Hour</div>
+                      <div class="dropdown-list-item dls-2" data-value="3">per Day</div>
+                    </div>
+                  </div>
+                  <div class="massage-number">
+                    <h6 class="accordion-title">Number of messages</h6>
+                    <div class="form-group">
+                      <input type="number" class="form-control amount-input" id="exampleInputNumber"
+                        placeholder="Type Amount">
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="advance-text">
+                  <h3>Validity period</h3>
+                  <p>The period during which the platform will try to deliver the message.</p>
+                </div>
+                <div class="period-count">
+                  <h6 class="accordion-title">Number of messages</h6>
+                  <div class="form-group period-parent">
+                    <input type="number" class="form-control period-input" id="exampleInputNumber" placeholder="48">
+                    <span class="period-text">Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- custom js -->
+  <script src="./js/create.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#datepicker').datepicker({
+        format: 'mm/dd/yyyy',
+        autoclose: true,
+        todayHighlight: true
+      });
+      $('.input-group-img').on('click', function () {
+        $('#datepicker').datepicker('show');
+      });
+
+      // $('#datepicker2').datepicker({
+      //   format: 'mm/dd/yyyy',
+      //   autoclose: true,
+      //   todayHighlight: true
+      // });
+    });
+  </script>
 </body>
+
 </html>
