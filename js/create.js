@@ -93,33 +93,166 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // dropdown for Days
 
-document.addEventListener('DOMContentLoaded', function () {
-  var dropdownDay = document.getElementById('custom-dropdown-day');
-  var dropdownInputDay = document.getElementById('dropdownInput-day');
-  var dropdownListDay = document.getElementById('dropdownList-day');
-  var dropdownItemsDay = document.querySelectorAll('.dls-3');
-  var dropdownIconDay = document.getElementById('dropdownIcon-day');
+// document.addEventListener('DOMContentLoaded', function () {
+//   var dropdownDay = document.getElementById('custom-dropdown-day');
+//   var dropdownInputDay = document.getElementById('dropdownInput-day');
+//   var dropdownListDay = document.getElementById('dropdownList-day');
+//   var dropdownItemsDay = document.querySelectorAll('.dls-3');
+//   var dropdownIconDay = document.getElementById('dropdownIcon-day');
 
+//   dropdownDay.addEventListener('click', function () {
+//     var isOpen = dropdownListDay.style.display === 'block';
+//     dropdownListDay.style.display = isOpen ? 'none' : 'block';
+//     dropdownIconDay.classList.toggle('rotate', !isOpen);
+//   });
+
+//   dropdownItemsDay.forEach(function (item) {
+//     item.addEventListener('click', function () {
+//       dropdownInputDay.value = item.textContent;
+//       dropdownListDay.style.display = 'none';
+//       dropdownInputDay.classList.remove('rotate');
+//     });
+//   });
+
+//   document.addEventListener('click', function (event) {
+//     if (!dropdownDay.contains(event.target)) {
+//       dropdownListDay.style.display = 'none';
+//       dropdownIconDay.classList.remove('rotate');
+//     }
+//   });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownDay = document.getElementById('custom-dropdown-day');
+  const inputDay = document.getElementById('dropdownInput-day');
+  const dropdownListDay = document.getElementById('dropdownList-day');
+  const dropdownIconDay = document.getElementById('dropdownIcon-day');
+  const selectAllCheckboxDay = document.getElementById('select-all-days');
+  const checkboxesDay = document.querySelectorAll('.dropdown-checkbox-day');
+
+  // Toggle dropdown list
   dropdownDay.addEventListener('click', function () {
-    var isOpen = dropdownListDay.style.display === 'block';
-    dropdownListDay.style.display = isOpen ? 'none' : 'block';
-    dropdownIconDay.classList.toggle('rotate', !isOpen);
+    dropdownListDay.style.display = dropdownListDay.style.display === 'block' ? 'none' : 'block';
   });
 
-  dropdownItemsDay.forEach(function (item) {
-    item.addEventListener('click', function () {
-      dropdownInputDay.value = item.textContent;
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!dropdownDay.contains(e.target)) {
       dropdownListDay.style.display = 'none';
-      dropdownInputDay.classList.remove('rotate');
+    }
+  });
+
+  // Handle selection
+  dropdownListDay.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dropdown-list-item')) {
+      const value = e.target.getAttribute('data-value');
+      addSelectedItem(value);
+    }
+  });
+
+  // Handle "Select All" functionality
+  selectAllCheckboxDay.addEventListener('change', function () {
+    checkboxesDay.forEach(checkbox => {
+      checkbox.checked = selectAllCheckboxDay.checked;
+      if (selectAllCheckboxDay.checked) {
+        addSelectedItem(checkbox.value);
+      } else {
+        removeSelectedItem(checkbox.value);
+      }
+    });
+    updatePlaceholder();
+  });
+
+
+
+  // Handle individual selection
+  checkboxesDay.forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+      handleCheckboxChange(checkbox);
+    });
+    checkbox.nextElementSibling.addEventListener('click', function () {
+      checkbox.checked = !checkbox.checked;
+      handleCheckboxChange(checkbox);
     });
   });
 
-  document.addEventListener('click', function (event) {
-    if (!dropdownDay.contains(event.target)) {
-      dropdownListDay.style.display = 'none';
-      dropdownIconDay.classList.remove('rotate');
+  // Handle checkbox change
+  function handleCheckboxChange(checkbox) {
+    if (checkbox.checked) {
+      addSelectedItem(checkbox.value);
+    } else {
+      removeSelectedItem(checkbox.value);
+      // Uncheck "Select All" if any individual item is deselected
+      selectAllCheckboxDay.checked = false;
     }
-  });
+    updatePlaceholder();
+  }
+
+  // Add selected item
+  function addSelectedItem(value) {
+    // Check if the item is already selected
+    const existingItems = document.querySelectorAll('.selected-item');
+    for (const item of existingItems) {
+      if (item.textContent.trim() === value) {
+        return; // Item already selected, do nothing
+      }
+    }
+
+    const selectedItem = document.createElement('span');
+    selectedItem.classList.add('selected-item');
+    selectedItem.innerText = value;
+
+    const removeIcon = document.createElement('span');
+    removeIcon.classList.add('remove');
+    removeIcon.innerText = ' x';
+    removeIcon.addEventListener('click', function () {
+      selectedItem.remove();
+      removeCheckbox(value);
+      updatePlaceholder();
+    });
+
+    selectedItem.appendChild(removeIcon);
+    inputDay.parentNode.insertBefore(selectedItem, inputDay);
+  }
+
+  // Remove selected item
+  function removeSelectedItem(value) {
+    const selectedItems = document.querySelectorAll('.selected-item');
+    for (const item of selectedItems) {
+      if (item.textContent.trim() === value) {
+        item.remove();
+      }
+    }
+  }
+
+  // Remove checkbox selection
+  function removeCheckbox(value) {
+    checkboxesDay.forEach(checkbox => {
+      if (checkbox.value === value) {
+        checkbox.checked = false;
+        removeSelectedItem(value)
+      }
+    });
+    // Uncheck "Select All" if any individual item is deselected
+    selectAllCheckboxDay.checked = false;
+  }
+
+  // Update placeholder based on selected items
+  function updatePlaceholder() {
+    const selectedItems = document.querySelectorAll('.selected-item');
+    if (selectedItems.length === 0) {
+      inputDay.setAttribute('placeholder', "Select days");
+      inputDay.removeAttribute('placeholder');
+      inputDay.classList.remove('hide-input');
+    } else {
+      inputDay.removeAttribute('placeholder');
+      inputDay.removeAttribute('data-placeholder'); 
+
+      // Clear input field
+      inputDay.value = '';
+      inputDay.classList.add('hide-input'); // Hide input field when item is selected
+    }
+  }
 });
 
 

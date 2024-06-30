@@ -255,6 +255,7 @@ body {
   width: 100%;
   position: relative;
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
   align-items: center;
   padding-right: 40px; /* Adjust padding to accommodate the image */
   cursor: pointer;
@@ -316,7 +317,29 @@ body {
 .dropdown-list-item:hover {
   background-color: #f1f1f1;
 }
-
+.selected-item {
+  display: inline-block;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+  background-color: #f4f4f2;
+  border-color: #d9d8d7;
+  color: #545452;
+  border-radius: 2px;
+  padding: 2px 10px;
+  font-size: 12px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.selected-item .remove {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #545452;
+  cursor: pointer;
+}
+.hide-input{
+  display: none;
+}
 /* .form-check{
   padding: 16px 0 0 0;
 } */
