@@ -123,6 +123,13 @@ body {
   display: none;
 }
 
+.first-area-dropdown .dropdown-input input {
+  border: none;
+  flex-grow: 1;
+  outline: none;
+  width: 70%;
+}
+
 .sender-dropdown-list {
   padding: 0 !important;
 }
@@ -314,6 +321,8 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  color: #545452;
+  font-size: 14px;
 }
 
 .custom-dropdown input:focus,
@@ -460,10 +469,12 @@ body {
 .accordion-body {
   padding: 32px !important;
 }
-.accordion-header:focus-visible{
+
+.accordion-header:focus-visible {
   outline: 0 !important;
 }
-.accordion-body:focus-visible{
+
+.accordion-body:focus-visible {
   margin-top: 10px;
   outline: 0 !important;
 }
@@ -756,6 +767,17 @@ input:checked+.slider:after {
   outline: 0 !important;
 }
 
+#dropdownInput-dataPay input {
+  border: none;
+}
+
+#dropdownInput-dataPay input:focus,
+#dropdownInput-dataPay input:active,
+#dropdownInput-dataPay input:focus-visible {
+  border: none;
+  outline: 0 !important;
+}
+
 .data-pay-dropdown .dropdown-icon {
   position: absolute;
   top: 50%;
@@ -843,6 +865,10 @@ input:checked+.slider:after {
   width: 300px;
 }
 
+#dropdownInput-timeUnit {
+  padding: 2px 0 !important;
+}
+
 .amount-input {
   border: 1px solid #3b3b39 !important;
   border-radius: 2px !important;
@@ -899,6 +925,114 @@ input:checked+.slider:after {
 }
 
 
+/* footer area */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 48px 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 1111;
+}
+
+.footer-left {
+  width: 40%;
+  display: flex;
+  gap: 30px;
+  /* justify-content: center; */
+}
+
+.footer-img {
+  width: 48px;
+}
+
+.footer-img img {
+  width: 48px !important;
+  margin-top: 25px;
+}
+
+.footer-input {
+  width: 100%;
+}
+
+.footer-input p {
+  color: #545452;
+  margin-bottom: 5px;
+}
+
+.footer-input input {
+  padding: 8px 9px;
+  color: #545452;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #72716f !important;
+}
+
+.footer-input input:focus-visible {
+  border: 1px solid #2E7899 !important;
+  box-shadow: none;
+  outline: 1;
+  outline-width: 2px;
+  outline-color: #2E7899 !important;
+  border-radius: 0px !important;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-right p {
+  font-size: 14px;
+  color: #72716F;
+  margin-bottom: 0;
+}
+
+.footer-button-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.footer-button {
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid;
+  font-size: 12px;
+  line-height: 1.5rem;
+}
+
+.save-button {
+  font-size: 12px;
+  color: #2e7899;
+  background-color: #fff;
+  border-color: #2e7899;
+}
+
+.save-button:hover {
+  background-color: #f0f9fc;
+  border-color: #0d516e;
+}
+
+.continue-button {
+  color: #fff;
+  background-color: #2e7899;
+  border-color: #2e7899;
+}
+
+.continue-button:hover {
+  background-color: #0d516e;
+  border-color: #0d516e;
+}
+
+
+
 /* responsive */
 @media (max-width:991px) {
   .form-check {
@@ -908,15 +1042,33 @@ input:checked+.slider:after {
   .data-pay-dropdown {
     width: 100%;
   }
+
+  .footer-right {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width:768px) {
   .main-area .container {
     padding: 0 16px;
   }
+
+  .footer {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .footer-left {
+    width: 100%;
+  }
 }
 
 @media (max-width:576px) {
+  .main-area {
+    padding: 100px 0 290px;
+  }
 
   .accordion-head-text {
     width: 60%;
@@ -948,15 +1100,31 @@ input:checked+.slider:after {
     font-size: 14px !important;
     padding-left: 0px;
   }
+
   .time-unit {
     width: 100%;
-}
-.massage-number {
-  width: 100%;
-}
-.period-parent {
-  width: 100%;
-}
+  }
+
+  .massage-number {
+    width: 100%;
+  }
+
+  .period-parent {
+    width: 100%;
+  }
+
+  .footer-button-area {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .save-button {
+    width: 130px;
+  }
+
+  .continue-button {
+    width: 180px !important;
+  }
 }
 
 @media (min-width:500px) and (max-width:576px) {

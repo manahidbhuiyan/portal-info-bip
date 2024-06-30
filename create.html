@@ -1,56 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>create</title>
   <!-- css links -->
-  <link rel="stylesheet" href="style/create.css">
+  <link rel="stylesheet" href="style/create.css" />
   <!-- bootstrap link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <!-- font awesome  -->
   <script src="https://kit.fontawesome.com/722bf37857.js" crossorigin="anonymous"></script>
   <!-- date picker cdn -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
-    rel="stylesheet">
+    rel="stylesheet" />
 </head>
 
 <body>
   <!-- header -->
-  <header class="header">
-
-  </header>
+  <header class="header"></header>
   <!-- main content -->
   <main class="main-area">
     <div class="container">
       <div class="main-content-dropdown">
-        <img src="./image/svg-image-17.svg" alt="Profile" class="sms-image">
+        <img src="./image/svg-image-17.svg" alt="Profile" class="sms-image" />
         <div class="text">SMS</div>
-        <img src="./image/svg-image-18.svg" alt="dropdown-icon" class="dropdown-image">
+        <img src="./image/svg-image-18.svg" alt="dropdown-icon" class="dropdown-image" />
       </div>
       <div class="main-area-box">
         <div class="main-box-title">
           <h4>Recipients and message</h4>
-          </div>
+        </div>
         <div class="main-box-content">
           <!-- multiple select area -->
           <div class="recept">
             <h6 class="accordion-title">Recipients</h6>
             <div class="first-area-dropdown">
               <div class="dropdown-container">
-                <input type="text" class="dropdown-input" id="dropdownInput-recipient"
-                  placeholder="Type or select recipients name">
+                <div class="dropdown-input" id="dropdownInput-recipient">
+                  <input type="text" placeholder="Type or select recipients name" />
+                </div>
                 <img src="./image/svg-image-18.svg" alt="Dropdown Icon" class="dropdown-icon"
-                  id="dropdownIcon-recipient">
+                  id="dropdownIcon-recipient" />
                 <div class="dropdown-list" id="dropdownList-recipient">
                   <div class="dropdown-section">
                     <div class="ab-top">
                       <p>People</p>
                       <a href="#">View All People</a>
-                  </div>
-                    <div class="dropdown-list-item ab-mid">
+                    </div>
+                    <div class="dropdown-list-item dropdown-list-item-recipient ab-mid" data-value="bkash chandra"
+                      data-type="name">
                       <span class="name-icon">BC</span>
                       <span class="name">bkash chandra</span>
                     </div>
@@ -59,8 +59,9 @@
                     <div class="ab-top mt-1">
                       <p>Option</p>
                       <a href="#">View More</a>
-                  </div>
-                    <div class="dropdown-list-item">
+                    </div>
+                    <div class="dropdown-list-item dropdown-list-item-recipient" data-value="01834960111"
+                      data-type="number">
                       <p>01834960111</p>
                     </div>
                   </div>
@@ -72,28 +73,29 @@
             <h6 class="accordion-title">Sender</h6>
             <div class="first-area-dropdown">
               <div class="dropdown-container">
-                <input type="text" class="dropdown-input" id="dropdownInput-sender"
-                  placeholder="Type or select sender name">
+                <div class="dropdown-input" id="dropdownInput-sender">
+                  <input type="text" placeholder="Type or select sender name" />
+                </div>
                 <img src="./image/svg-image-18.svg" alt="Dropdown Icon" class="dropdown-icon"
-                  id="dropdownIcon-sender">
+                  id="dropdownIcon-sender" />
                 <div class="dropdown-list sender-dropdown-list" id="dropdownList-sender">
                   <div class="dropdown-section sender">
                     <div class="dropdown-section-title">SHARED</div>
-                    <div class="dropdown-list-item">
-                      <P>447491163443</P>
+                    <div class="dropdown-list-item dropdown-list-item-sender" data-value="447491163443">
+                      <p>447491163443</p>
                     </div>
                   </div>
-                  <hr class="hr-1">
+                  <hr class="hr-1" />
                   <div class="dropdown-section sender">
                     <div class="dropdown-section-title">DEDICATED</div>
-                    <div class="dropdown-list-item">
+                    <div class="dropdown-list-item dropdown-list-item-sender" data-value="ServiceSMS">
                       <p>ServiceSMS</p>
                     </div>
                   </div>
                   <div class="dropdown-section">
-                  <hr class="hr-2">
+                    <hr class="hr-2" />
                     <a class="dropdown-list-item-button" href="#">BUY NUMBER</a>
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -107,100 +109,46 @@
                 </div>
                 <div class="textarea-container">
                   <textarea class="form-control textarea" rows="6" placeholder="Enter your message"></textarea>
-                  <img src="./image/svg-image-24.svg" alt="Icon" class="textarea-image">
+                  <img src="./image/svg-image-24.svg" alt="Icon" class="textarea-image" />
                 </div>
               </div>
               <div class="col-sm-12 col-lg-3 col-xl-2">
-                <h6 class="accordion-title">Character set <img src="./image/svg-image-25.svg" alt=""></h6>
+                <h6 class="accordion-title">
+                  Character set <img src="./image/svg-image-25.svg" alt="" />
+                </h6>
                 <div class="custom-dropdown-container">
-                  <div class="custom-dropdown" id="custom-dropdown1">
-                    <input type="text" id="dropdownInput dropdownInput1" readonly placeholder="Unicode">
-                    <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon1">
+                  <div class="custom-dropdown" id="custom-dropdown-char">
+                    <input type="text" id="dropdownInput-char" readonly placeholder="Unicode" />
+                    <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-char" />
                   </div>
-                  <div class="dropdown-list" id="dropdownList1">
-                    <div class="dropdown-list-item dls-1" data-value="1">Unicode</div>
-                    <div class="dropdown-list-item dls-1" data-value="2">Default</div>
-                    <div class="dropdown-list-item dls-1" data-value="3">Greek</div>
-                    <div class="dropdown-list-item dls-1" data-value="3">Turkish</div>
-                    <div class="dropdown-list-item dls-1" data-value="3">Bangla</div>
+                  <div class="dropdown-list" id="dropdownList-char">
+                    <div class="dropdown-list-item dls-char" data-value="1">
+                      Unicode
+                    </div>
+                    <div class="dropdown-list-item dls-char" data-value="2">
+                      Default
+                    </div>
+                    <div class="dropdown-list-item dls-char" data-value="3">
+                      Greek
+                    </div>
+                    <div class="dropdown-list-item dls-char" data-value="3">
+                      Turkish
+                    </div>
+                    <div class="dropdown-list-item dls-char" data-value="3">
+                      Bangla
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="form-check flash-sms">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
               <label class="form-check-label" for="flexCheckDefault">
-                Flash SMS <img src="./image/svg-image-25.svg" style="cursor: pointer;" alt="">
+                Flash SMS
+                <img src="./image/svg-image-25.svg" style="cursor: pointer" alt="" />
               </label>
             </div>
           </div>
-
-
-          <!-- <div class="accordion" id="accordionExample">
-                        <h6 class="accordion-title">Recipients</h6>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                              <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne"
-                                aria-expanded="false"
-                                aria-controls="flush-collapseOne"
-                              >
-                              <input type="text" id="dropdownInput" class="form-control" placeholder="Type or select the recipients name" readonly>
-                                    
-                            </button>
-                            </h2>
-                            <div
-                              id="flush-collapseOne"
-                              class="accordion-collapse collapse"
-                              data-bs-parent="#accordionFlushExample"
-                            >
-                              <div class="accordion-body">
-                                <div class="ab-top">
-                                    <p>People</p>
-                                    <a href="#">View All People</a>
-                                </div>
-                                <div class="ab-mid">
-                                    <span class="name-icon">BC</span>
-                                    <span class="name">bkash chandra</span>
-                                </div>
-                                <div class="ab-top mt-1">
-                                    <p>Option</p>
-                                    <a href="#">View More</a>
-                                </div>
-                                <p>01834960111</p>
-                              </div>
-                            </div>
-                          </div>
-                        <h6 class="accordion-title"> Sender</h6>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                              <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="flush-collapseTwo"
-                              >
-                              <input type="text" class="form-control" placeholder="Type or select the recipients name">
-                                    
-                            </button>
-                            </h2>
-                            <div
-                              id="flush-collapseTwo"
-                              class="accordion-collapse collapse"
-                              data-bs-parent="#accordionFlushExample"
-                            >
-                              <div class="accordion-body">
-                                <h6>01834960111</h6>
-                                <p>447491163443</p>
-                              </div>
-                            </div>
-                          </div>
-                    </div> -->
         </div>
       </div>
 
@@ -213,7 +161,7 @@
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <div class="accordion-head-image">
-                <img src="./image/svg-image-27.svg" alt="">
+                <img src="./image/svg-image-27.svg" alt="" />
               </div>
               <div class="accordion-head-text">
                 <h5>Message scheduling</h5>
@@ -229,7 +177,7 @@
                   <div class="grid-item">
                     <p class="com-title">Start date</p>
                     <div class="input-group">
-                      <input type="text" class="form-control date-input" id="datepicker" placeholder="Select Date">
+                      <input type="text" class="form-control date-input" id="datepicker" placeholder="Select Date" />
                       <span class="input-group-img"><img src="./image/svg-image-28.svg" alt="" /></span>
                     </div>
                   </div>
@@ -237,8 +185,9 @@
                     <p class="com-title">Start time</p>
                     <div class="time-picker-container">
                       <input type="text" class="form-control time-picker-input" placeholder="Select Time"
-                        id="timePickerInput1">
-                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon1" alt="Dropdown Icon">
+                        id="timePickerInput1" />
+                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon1"
+                        alt="Dropdown Icon" />
                       <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown1">
                         <li class="dropdown-item">00:00</li>
                         <li class="dropdown-item">00:15</li>
@@ -343,33 +292,49 @@
                     <p class="com-title">Time zone</p>
                     <div class="custom-dropdown-container">
                       <div class="custom-dropdown" id="custom-dropdown-time">
-                        <input type="text" id="dropdownInput dropdownInput-time" readonly
-                          placeholder="United Arab Emirates / Abu Dhabi (GST)">
-                        <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-time">
+                        <input type="text" id="dropdownInput-time" readonly
+                          placeholder="United Arab Emirates / Abu Dhabi (GST)" />
+                        <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-time" />
                       </div>
                       <div class="dropdown-list" id="dropdownList-time">
-                        <div class="dropdown-list-item dls-l" data-value="1">United Arab Emirates / Abu Dhabi (GST)
+                        <div class="dropdown-list-item dls-time" data-value="1">
+                          United Arab Emirates / Abu Dhabi (GST)
                         </div>
-                        <div class="dropdown-list-item dls-l" data-value="2">Ghana / Accra (GMT)</div>
-                        <div class="dropdown-list-item dls-l" data-value="3">Australia / Adelaide (ACST/ACDT)</div>
-                        <div class="dropdown-list-item dls-l" data-value="3">Ethiopia / Addis Ababa (EAT)</div>
-                        <div class="dropdown-list-item dls-l" data-value="3">Qatar / Doha (AST)</div>
-                        <div class="dropdown-list-item dls-l" data-value="3">Jordan / Amman (EET/EEST)</div>
-                        <div class="dropdown-list-item dls-l" data-value="3">United States / Adak (HST/HDT)</div>
-                        <div class="dropdown-list-item dls-l" data-value="3">Bangladesh / Dhaka (BST)</div>
+                        <div class="dropdown-list-item dls-time" data-value="2">
+                          Ghana / Accra (GMT)
+                        </div>
+                        <div class="dropdown-list-item dls-time" data-value="3">
+                          Australia / Adelaide (ACST/ACDT)
+                        </div>
+                        <div class="dropdown-list-item dls-time" data-value="3">
+                          Ethiopia / Addis Ababa (EAT)
+                        </div>
+                        <div class="dropdown-list-item dls-time" data-value="3">
+                          Qatar / Doha (AST)
+                        </div>
+                        <div class="dropdown-list-item dls-time" data-value="3">
+                          Jordan / Amman (EET/EEST)
+                        </div>
+                        <div class="dropdown-list-item dls-time" data-value="3">
+                          United States / Adak (HST/HDT)
+                        </div>
+                        <div class="dropdown-list-item dls-time" data-value="3">
+                          Bangladesh / Dhaka (BST)
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr>
+                <hr />
                 <h6 class="accordion-title">Communication start</h6>
                 <div class="grid-container">
                   <div class="grid-item">
                     <p class="com-title">Start time</p>
                     <div class="time-picker-container">
                       <input type="text" class="form-control time-picker-input" placeholder="Select Time"
-                        id="timePickerInput2">
-                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon2" alt="Dropdown Icon">
+                        id="timePickerInput2" />
+                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon2"
+                        alt="Dropdown Icon" />
                       <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown2">
                         <li class="dropdown-item">00:00</li>
                         <li class="dropdown-item">00:15</li>
@@ -474,8 +439,9 @@
                     <p class="com-title">End time</p>
                     <div class="time-picker-container">
                       <input type="text" class="form-control time-picker-input" placeholder="Select Time"
-                        id="timePickerInput3">
-                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon3" alt="Dropdown Icon">
+                        id="timePickerInput3" />
+                      <img src="./image/svg-image-18.svg" class="dropdown-icon-com dropdown-icon3"
+                        alt="Dropdown Icon" />
                       <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown3">
                         <li class="dropdown-item">00:00</li>
                         <li class="dropdown-item">00:15</li>
@@ -579,49 +545,47 @@
                   <div class="grid-item full-width">
                     <p class="com-title">Days</p>
                     <div class="custom-dropdown-container">
-                        <div class="custom-dropdown" id="custom-dropdown-day">
-                            <input type="text" id="dropdownInput-day" placeholder="Select days">
-                            <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-day">
+                      <div class="custom-dropdown" id="custom-dropdown-day">
+                        <input type="text" id="dropdownInput-day" placeholder="Select days" />
+                        <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-day" />
+                      </div>
+                      <div class="dropdown-list" id="dropdownList-day">
+                        <div class="dropdown-list-item">
+                          <input type="checkbox" id="select-all-days" />
+                          <label for="select-all">Select All</label>
                         </div>
-                        <div class="dropdown-list" id="dropdownList-day">
-                            <div class="dropdown-list-item">
-                                <input type="checkbox" id="select-all-days" />
-                                <label for="select-all">Select All</label>
-                            </div>
-                            <hr>
-                            <div class="dropdown-list-item dropdown-list-item-day" data-value="Saturday">
-                                <input type="checkbox" class="dropdown-checkbox-day" value="Saturday">
-                                <label>Saturday</label>
-                            </div>
-                            <div class="dropdown-list-item dropdown-list-item-day" data-value="Sunday">
-                                <input type="checkbox" class="dropdown-checkbox-day" value="Sunday">
-                                <label>Sunday</label>
-                            </div>
-                            <div class="dropdown-list-item dropdown-list-item-day" data-value="Monday">
-                                <input type="checkbox" class="dropdown-checkbox-day" value="Monday">
-                                <label>Monday</label>
-                            </div>
-                            <div class="dropdown-list-item dropdown-list-item-day" data-value="Tuesday">
-                                <input type="checkbox" class="dropdown-checkbox-day" value="Tuesday">
-                                <label>Tuesday</label>
-                            </div>
-                            <div class="dropdown-list-item dropdown-list-item-day" data-value="Wednesday">
-                                <input type="checkbox" class="dropdown-checkbox-day" value="Wednesday">
-                                <label>Wednesday</label>
-                            </div>
-                            <div class="dropdown-list-item dropdown-list-item-day" data-value="Thursday">
-                                <input type="checkbox" class="dropdown-checkbox-day" value="Thursday">
-                                <label>Thursday</label>
-                            </div>
-                            <div class="dropdown-list-item dropdown-list-item-day" data-value="Friday">
-                                <input type="checkbox" class="dropdown-checkbox-day" value="Friday">
-                                <label>Friday</label>
-                            </div>
+                        <hr />
+                        <div class="dropdown-list-item dropdown-list-item-day" data-value="Saturday">
+                          <input type="checkbox" class="dropdown-checkbox-day" value="Saturday" />
+                          <label>Saturday</label>
                         </div>
+                        <div class="dropdown-list-item dropdown-list-item-day" data-value="Sunday">
+                          <input type="checkbox" class="dropdown-checkbox-day" value="Sunday" />
+                          <label>Sunday</label>
+                        </div>
+                        <div class="dropdown-list-item dropdown-list-item-day" data-value="Monday">
+                          <input type="checkbox" class="dropdown-checkbox-day" value="Monday" />
+                          <label>Monday</label>
+                        </div>
+                        <div class="dropdown-list-item dropdown-list-item-day" data-value="Tuesday">
+                          <input type="checkbox" class="dropdown-checkbox-day" value="Tuesday" />
+                          <label>Tuesday</label>
+                        </div>
+                        <div class="dropdown-list-item dropdown-list-item-day" data-value="Wednesday">
+                          <input type="checkbox" class="dropdown-checkbox-day" value="Wednesday" />
+                          <label>Wednesday</label>
+                        </div>
+                        <div class="dropdown-list-item dropdown-list-item-day" data-value="Thursday">
+                          <input type="checkbox" class="dropdown-checkbox-day" value="Thursday" />
+                          <label>Thursday</label>
+                        </div>
+                        <div class="dropdown-list-item dropdown-list-item-day" data-value="Friday">
+                          <input type="checkbox" class="dropdown-checkbox-day" value="Friday" />
+                          <label>Friday</label>
+                        </div>
+                      </div>
                     </div>
-                </div>
-
-                
+                  </div>
                 </div>
               </div>
             </div>
@@ -634,11 +598,14 @@
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               <div class="accordion-head-image">
-                <img src="./image/svg-image-31.svg" alt="">
+                <img src="./image/svg-image-31.svg" alt="" />
               </div>
               <div class="accordion-head-text">
                 <h5>Tracking and reporting</h5>
-                <p>Track customer actions and generate reports to discover more about your customers.</p>
+                <p>
+                  Track customer actions and generate reports to discover more
+                  about your customers.
+                </p>
               </div>
             </button>
           </h2>
@@ -647,98 +614,112 @@
               <div class="form-checkbox">
                 <div class="switch-button">
                   <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" />
                     <span class="slider"></span>
                   </label>
                 </div>
 
                 <label class="form-check-label" for="flexCheckDefault">
-                  <span class="check-level-1">Shorten URLs</span> <br>
-                  <span class="check-level-2">Required to track URL clicks. Short URLs expire 100 days after the
-                    launch.</span>
+                  <span class="check-level-1">Shorten URLs</span> <br />
+                  <span class="check-level-2">Required to track URL clicks. Short URLs expire 100 days
+                    after the launch.</span>
                 </label>
               </div>
-              <div class="accordion-body-title">
-                Tracking options
-              </div>
+              <div class="accordion-body-title">Tracking options</div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                 <label class="form-check-label" for="flexCheckDefault">
-                  <span class="check-level-1">Track URL clicks</span> <br>
-                  <span class="check-level-2">Discover which campaign links were clicked on, how many times, and by
-                    whom.</span>
+                  <span class="check-level-1">Track URL clicks</span> <br />
+                  <span class="check-level-2">Discover which campaign links were clicked on, how many
+                    times, and by whom.</span>
                 </label>
               </div>
-              <div class="accordion-body-title">
-                Reporting options
-              </div>
+              <div class="accordion-body-title">Reporting options</div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                 <label class="form-check-label" for="flexCheckDefault">
-                  <span class="check-level-1">Enable delivery reports over API pull</span> <br>
+                  <span class="check-level-1">Enable delivery reports over API pull</span>
+                  <br />
                   <span class="check-level-2">Discover how many messages were delivered.</span>
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                 <label class="form-check-label" for="flexCheckDefault">
-                  <span class="check-level-1">Push delivery reports to webhook</span> <br>
-                  <span class="check-level-2">Subscribe to events happening in your account with your integration
-                    installed.</span>
+                  <span class="check-level-1">Push delivery reports to webhook</span>
+                  <br />
+                  <span class="check-level-2">Subscribe to events happening in your account with your
+                    integration installed.</span>
                 </label>
               </div>
               <div class="">
                 <h5 class="accordion-body-title">Data Payload</h5>
-                <p class="Select-additiona-text">Select additional data from contacts and add it to the message. This
-                  data will be <br> visible on message
-                  reports.
+                <p class="Select-additiona-text">
+                  Select additional data from contacts and add it to the
+                  message. This data will be <br />
+                  visible on message reports.
                   <a href="#">Learn More</a>
                 </p>
               </div>
               <div class="data-pay-dropdown">
                 <div class="dropdown-container">
-                  <input type="text" class="dropdown-input" id="dropdownInput-dataPay" readonly
-                    placeholder="Select options">
+                  <div class="dropdown-input" id="dropdownInput-dataPay">
+                    <input type="text" placeholder="Select options" />
+                  </div>
                   <img src="./image/svg-image-18.svg" alt="Dropdown Icon" class="dropdown-icon"
-                    id="dropdownIcon-dataPay">
+                    id="dropdownIcon-dataPay" />
                   <div class="dropdown-list" id="dropdownList-dataPay">
                     <div class="dropdown-section">
-                      <div class="dropdown-section-title">Standard Attributes</div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option1">
+                      <div class="dropdown-section-title">
+                        Standard Attributes
+                      </div>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option1" data-value="Id" />
                         <label for="option1">Id</label>
                       </div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option2">
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option2" data-value="firstName" />
                         <label for="option2">firstName</label>
                       </div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option2">
-                        <label for="option2">lastName</label>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option3" data-value="lastName" />
+                        <label for="option3">lastName</label>
                       </div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option2">
-                        <label for="option2">type</label>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option4" data-value="type" />
+                        <label for="option4">type</label>
                       </div>
                     </div>
-                    <hr>
+                    <hr />
                     <div class="dropdown-section">
-                      <div class="dropdown-section-title">Contact Information</div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option3">
-                        <label for="option3">Item 3</label>
+                      <div class="dropdown-section-title">
+                        Contact Information
                       </div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option4">
-                        <label for="option4">Item 4</label>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option5" data-value="msisdn" />
+                        <label for="option5">msisdn</label>
                       </div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option3">
-                        <label for="option3">Item 3</label>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option6" data-value="email" />
+                        <label for="option6">email</label>
                       </div>
-                      <div class="dropdown-list-item">
-                        <input type="checkbox" id="option4">
-                        <label for="option4">Item 4</label>
+                    </div>
+                    <hr />
+                    <div class="dropdown-section">
+                      <div class="dropdown-section-title">
+                        Company Information
+                      </div>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option7" data-value="name" />
+                        <label for="option7">name</label>
+                      </div>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option8" data-value="notes" />
+                        <label for="option8">notes</label>
+                      </div>
+                      <div class="dropdown-list-item dropdown-list-item-dataPay">
+                        <input type="checkbox" id="option9" data-value="region" />
+                        <label for="option9">region</label>
                       </div>
                     </div>
                   </div>
@@ -746,7 +727,6 @@
               </div>
             </div>
           </div>
-
         </div>
         <!-- 3rd accordion -->
         <div class="accordion-item">
@@ -754,11 +734,14 @@
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
               <div class="accordion-head-image">
-                <img src="./image/svg-image-34.svg" alt="">
+                <img src="./image/svg-image-34.svg" alt="" />
               </div>
               <div class="accordion-head-text">
                 <h5>Advanced Settings</h5>
-                <p>Track customer actions and generate reports to discover more about your customers.</p>
+                <p>
+                  Track customer actions and generate reports to discover more
+                  about your customers.
+                </p>
               </div>
             </button>
           </h2>
@@ -767,40 +750,54 @@
               <div class="advance-setting-area">
                 <div class="advance-text">
                   <h3>Message sending speed</h3>
-                  <p>Limit the number of messages sent out over time. Set the speed that your customer support can
-                    handle to prevent crashes.</p>
+                  <p>
+                    Limit the number of messages sent out over time. Set the
+                    speed that your customer support can handle to prevent
+                    crashes.
+                  </p>
                 </div>
                 <div class="advance-option">
                   <div class="custom-dropdown-container time-unit">
                     <h6 class="accordion-title">Time unit</h6>
-                    <div class="custom-dropdown" id="custom-dropdown11">
-                      <input type="text" id="dropdownInput dropdownInput3" readonly placeholder="Select speed unit">
-                      <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon11">
+                    <div class="custom-dropdown" id="custom-dropdown-timeUnit">
+                      <input type="text" id="dropdownInput-timeUnit" readonly placeholder="Select speed unit" />
+                      <img src="./image/svg-image-18.svg" alt="Dropdown Icon" id="dropdownIcon-timeUnit" />
                     </div>
-                    <div class="dropdown-list" id="dropdownList3">
-                      <div class="dropdown-list-item dls-2" data-value="1">Select nono</div>
-                      <div class="dropdown-list-item dls-2" data-value="2">per Minute</div>
-                      <div class="dropdown-list-item dls-2" data-value="3">per Hour</div>
-                      <div class="dropdown-list-item dls-2" data-value="3">per Day</div>
+                    <div class="dropdown-list" id="dropdownList-timeUnit">
+                      <div class="dropdown-list-item dls-timeUnit" data-value="1">
+                        Select nono
+                      </div>
+                      <div class="dropdown-list-item dls-timeUnit" data-value="2">
+                        per Minute
+                      </div>
+                      <div class="dropdown-list-item dls-timeUnit" data-value="3">
+                        per Hour
+                      </div>
+                      <div class="dropdown-list-item dls-timeUnit" data-value="3">
+                        per Day
+                      </div>
                     </div>
                   </div>
                   <div class="massage-number">
                     <h6 class="accordion-title">Number of messages</h6>
                     <div class="form-group">
                       <input type="number" class="form-control amount-input" id="exampleInputNumber"
-                        placeholder="Type Amount">
+                        placeholder="Type Amount" />
                     </div>
                   </div>
                 </div>
-                <hr>
+                <hr />
                 <div class="advance-text">
                   <h3>Validity period</h3>
-                  <p>The period during which the platform will try to deliver the message.</p>
+                  <p>
+                    The period during which the platform will try to deliver
+                    the message.
+                  </p>
                 </div>
                 <div class="period-count">
                   <h6 class="accordion-title">Number of messages</h6>
                   <div class="form-group period-parent">
-                    <input type="number" class="form-control period-input" id="exampleInputNumber" placeholder="48">
+                    <input type="number" class="form-control period-input" id="exampleInputNumber" placeholder="48" />
                     <span class="period-text">Hours</span>
                   </div>
                 </div>
@@ -811,6 +808,27 @@
       </div>
     </div>
   </main>
+
+  <!-- Footer area -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="footer-img">
+        <img src="./image/svg-image-17.svg" alt="" />
+      </div>
+      <div class="footer-input">
+        <p>DRAFT</p>
+        <input type="text" placeholder="Broadcast_SMS" />
+      </div>
+    </div>
+    <div class="footer-right">
+      <p>Last saved in 4 seconds</p>
+      <div class="footer-button-area">
+        <a href="#" class="footer-button save-button">SAVE TEMPLATE</a>
+        <a href="#" class="footer-button continue-button">CONTINUE TO PREVIEW</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
@@ -825,13 +843,13 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('#datepicker').datepicker({
-        format: 'mm/dd/yyyy',
+      $("#datepicker").datepicker({
+        format: "mm/dd/yyyy",
         autoclose: true,
-        todayHighlight: true
+        todayHighlight: true,
       });
-      $('.input-group-img').on('click', function () {
-        $('#datepicker').datepicker('show');
+      $(".input-group-img").on("click", function () {
+        $("#datepicker").datepicker("show");
       });
 
       // $('#datepicker2').datepicker({
